@@ -4,6 +4,9 @@ const adminfirebase = require('firebase-admin')
 
 const app =  express()
 
+
+const port = process.env.PORT || 3000;
+
 const admin = adminfirebase.initializeApp({
     credential: adminfirebase.credential.cert('./proyecto-daw-eba1d-firebase-adminsdk-wou3o-b71ea1cfcd.json'),
     databaseURL: "https://proyecto-daw-eba1d.firebaseio.com"
