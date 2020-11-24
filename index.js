@@ -5,7 +5,7 @@ const adminfirebase = require('firebase-admin')
 const app =  express()
 
 
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 const admin = adminfirebase.initializeApp({
     credential: adminfirebase.credential.cert('./proyecto-daw-eba1d-firebase-adminsdk-wou3o-b71ea1cfcd.json'),
@@ -49,7 +49,7 @@ app.post('/deleteuser',(request,response)=>{
   deluser(request.body.uid)
 })
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log("server hosted in port 3000")
 })
 
